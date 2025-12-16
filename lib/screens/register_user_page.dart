@@ -11,6 +11,17 @@ class RegisterUserPage extends StatelessWidget {
       backgroundColor: Colors.white70,
       appBar: AppBar(
         backgroundColor: Colors.white70,
+        actionsIconTheme: IconThemeData(size: 24.0),
+        actions: [
+          IconButton(
+            onPressed: () => {
+              print('Cliquei no botão de configurações')
+            },
+            icon: Icon(Icons.arrow_back_ios),
+            alignment: AlignmentGeometry.centerLeft,
+            color: Colors.deepPurple,
+          ),
+        ],
       ),
       body: Container(
         padding: EdgeInsetsGeometry.symmetric(horizontal: 24.0, vertical: 32.0),
