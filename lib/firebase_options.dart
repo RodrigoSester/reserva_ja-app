@@ -3,6 +3,19 @@
 import 'package:firebase_core/firebase_core.dart' show FirebaseOptions;
 import 'package:flutter/foundation.dart'
     show defaultTargetPlatform, kIsWeb, TargetPlatform;
+import 'package:flutter_dotenv/flutter_dotenv.dart';
+
+String get databaseUrl => dotenv.env['DATABASE_URL'] ?? '';
+String get projectId => dotenv.env['PROJECT_ID'] ?? '';
+String get bucket => dotenv.env['BUCKET'] ?? '';
+
+String get androidApiKey => dotenv.env['ANDROID_API_KEY'] ?? '';
+String get iosApiKey => dotenv.env['IOS_API_KEY'] ?? '';
+String get webApiKey => dotenv.env['WEB_API_KEY'] ?? '';
+
+String get androidAppId => dotenv.env['ANDROID_APP_ID'] ?? '';
+String get iosAppId => dotenv.env['IOS_APP_ID'] ?? '';
+String get webAppId => dotenv.env['WEB_APP_ID'] ?? '';
 
 /// Default [FirebaseOptions] for use with your Firebase apps.
 ///
@@ -34,7 +47,6 @@ class DefaultFirebaseOptions {
           'you can reconfigure this by running the FlutterFire CLI again.',
         );
       case TargetPlatform.linux:
-        return web;
         throw UnsupportedError(
           'DefaultFirebaseOptions have not been configured for linux - '
           'you can reconfigure this by running the FlutterFire CLI again.',
@@ -46,33 +58,33 @@ class DefaultFirebaseOptions {
     }
   }
 
-  static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyCo2cbhtxejH5swdO_XwgTvOsFPFF5jeCI',
-    appId: '1:367004069452:web:6dd08591758ed637a04ee9',
+  static FirebaseOptions web = FirebaseOptions(
+    apiKey: webApiKey,
+    appId: webAppId,
     messagingSenderId: '367004069452',
-    projectId: 'reserva-ja-app',
+    projectId: projectId,
     authDomain: 'reserva-ja-app.firebaseapp.com',
-    databaseURL: 'https://reserva-ja-app-default-rtdb.firebaseio.com',
-    storageBucket: 'reserva-ja-app.firebasestorage.app',
+    databaseURL: databaseUrl,
+    storageBucket: bucket,
     measurementId: 'G-C1LRW0GK0X',
   );
 
-  static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyCtZAThxxEpMaoic4CdOKjcbVgawWNOvzU',
-    appId: '1:367004069452:android:d25c04be78c4a5bca04ee9',
+  static FirebaseOptions android = FirebaseOptions(
+    apiKey: androidApiKey,
+    appId: androidAppId,
     messagingSenderId: '367004069452',
-    projectId: 'reserva-ja-app',
-    databaseURL: 'https://reserva-ja-app-default-rtdb.firebaseio.com',
-    storageBucket: 'reserva-ja-app.firebasestorage.app',
+    projectId: projectId,
+    databaseURL: databaseUrl,
+    storageBucket: bucket,
   );
 
-  static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyAuGHwqZ5f2ulUXkaN8DvKuhbLnqNbueeE',
-    appId: '1:367004069452:ios:bb0acf1bd4909eaca04ee9',
+  static FirebaseOptions ios = FirebaseOptions(
+    apiKey: iosApiKey,
+    appId: iosAppId,
     messagingSenderId: '367004069452',
-    projectId: 'reserva-ja-app',
-    databaseURL: 'https://reserva-ja-app-default-rtdb.firebaseio.com',
-    storageBucket: 'reserva-ja-app.firebasestorage.app',
+    projectId: projectId,
+    databaseURL: databaseUrl,
+    storageBucket: bucket,
     iosBundleId: 'com.example.reservaJa',
   );
 }
