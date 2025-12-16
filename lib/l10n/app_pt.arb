@@ -1,0 +1,27 @@
+{
+  "helloWorld": "Hello World!",
+  "@helloWorld": {
+    "description": "The conventional newborn programmer greeting"
+  },
+  "hello": "Hello {userName}",
+  "@hello": {
+    "description": "Message with single parameter",
+    "placeholders": {
+      "userName": {
+        "type": "String",
+        "example": "Hope"
+      }
+    }
+  },
+  "appName": "Reserva Já",
+  "@appName": {
+    "description": "The name of the application"
+  },
+  "reservation": "Reservar",
+  "searchEstablishments": "Busque por quadras...",
+  "searchBySport": "Busque por esporte",
+  "searchByLocation": "Quadras perto de você",
+  "registerAccount": "Crie sua conta",
+  "joinUs": "Junte-se a nós para começar a jogar",
+  "register": "Registrar"
+}

@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "367004069452",
+    "firebase_url": "https://reserva-ja-app-default-rtdb.firebaseio.com",
+    "project_id": "reserva-ja-app",
+    "storage_bucket": "reserva-ja-app.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:367004069452:android:d25c04be78c4a5bca04ee9",
+        "android_client_info": {
+          "package_name": "com.example.reserva_ja"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCtZAThxxEpMaoic4CdOKjcbVgawWNOvzU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
