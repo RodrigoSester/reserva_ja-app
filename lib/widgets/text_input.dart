@@ -9,6 +9,8 @@ class TextInput extends StatelessWidget {
   final TextInputType keyboardType;
   final TextStyle style;
   final InputDecoration? decoration;
+  final String? Function(String? value)? validator;
+  final ValueChanged? Function(String? value)? onChanged;
 
   const TextInput({
     super.key,
@@ -19,6 +21,8 @@ class TextInput extends StatelessWidget {
     this.obscureText = false,
     this.keyboardType = TextInputType.text,
     this.style = const TextStyle(fontSize: 16),
+    this.validator,
+    this.onChanged,
   });
 
   @override
@@ -27,14 +31,17 @@ class TextInput extends StatelessWidget {
       return Column(
         children: <Widget>[
           SizedBox(
-              child: TextField(
-                style: style,
-                decoration: decoration,
-                controller: controller,
-                obscureText: obscureText,
-                keyboardType: keyboardType,
-                textDirection: TextDirection.ltr,
-              )
+            child: TextFormField(
+              initialValue: '',
+              style: style,
+              decoration: decoration,
+              controller: controller,
+              obscureText: obscureText,
+              keyboardType: keyboardType,
+              textDirection: TextDirection.ltr,
+              validator: validator,
+              onChanged: onChanged,
+            )
           )
         ],
       );
@@ -53,13 +60,15 @@ class TextInput extends StatelessWidget {
         ),
         const SizedBox(height: 4.0),
         SizedBox(
-          child: TextField(
+          child: TextFormField(
             style: style,
             decoration: decoration,
             controller: controller,
             obscureText: obscureText,
             keyboardType: keyboardType,
             textDirection: TextDirection.ltr,
+            validator: validator,
+            onChanged: onChanged,
           )
         )
       ],
