@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:reserva_ja/l10n/app_localizations.dart';
-import 'package:reserva_ja/widgets/EstablishmentCard.dart';
-import 'package:reserva_ja/widgets/Sport.dart';
-import 'package:reserva_ja/widgets/TextInput.dart';
+import 'package:reserva_ja/widgets/establishment_card.dart';
+import 'package:reserva_ja/widgets/sport.dart';
+import 'package:reserva_ja/widgets/text_input.dart';
 
 class UserHomePage extends StatelessWidget {
   const UserHomePage({super.key});
