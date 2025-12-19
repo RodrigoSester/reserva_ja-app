@@ -1,13 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
+import 'package:reserva_ja/app_theme.dart';
 import 'package:reserva_ja/l10n/app_localizations.dart';
-import 'package:reserva_ja/screens/RegisterUserPage.dart';
-import 'package:reserva_ja/screens/UserHomePage.dart';
+import 'package:reserva_ja/screens/establishment_page.dart';
+import 'package:reserva_ja/screens/register_establishment_page.dart';
+import 'package:reserva_ja/screens/register_user_page.dart';
+import 'package:reserva_ja/screens/user_home_page.dart';
+import 'package:reserva_ja/screens/welcome_page.dart';
 import 'firebase_options.dart';
 
-void main() async {
+Future main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
+  await dotenv.load(fileName: ".env");
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
@@ -22,12 +28,12 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Reserva Já',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-      ),
+      theme: AppTheme.lightTheme,
+      darkTheme: AppTheme.darkTheme,
+      themeMode: ThemeMode.system,
       localizationsDelegates: AppLocalizations.localizationsDelegates,
       supportedLocales: AppLocalizations.supportedLocales,
-      home: RegisterUserPage(),
+      home: RegisterEstablishmentPage(),
     );
   }
 }
