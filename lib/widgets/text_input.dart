@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:reserva_ja/app_colors.dart';
 
 class TextInput extends StatelessWidget {
   final String? label;
@@ -47,6 +48,7 @@ class TextInput extends StatelessWidget {
           style: TextTheme.of(context).labelMedium?.copyWith(
             fontSize: 14,
             fontWeight: FontWeight.w700,
+            color: AppColors.primaryText
           ),
         ),
         const SizedBox(height: 4.0),

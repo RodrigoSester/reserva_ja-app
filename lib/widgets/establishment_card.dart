@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:reserva_ja/app_colors.dart';
 import 'package:reserva_ja/l10n/app_localizations.dart';
 
 class EstablishmentCard extends StatelessWidget {
@@ -70,19 +71,19 @@ class EstablishmentCard extends StatelessWidget {
                   style: Theme.of(ctx).textTheme.titleMedium?.copyWith(
                     fontSize: 12,
                     fontWeight: FontWeight.bold,
-                    color: Colors.black,
+                    color: AppColors.primaryText,
                   ),
                 ),
                 const SizedBox(height: 4.0),
                 TextButton(
                     style: ButtonStyle(
-                      backgroundColor: WidgetStateProperty.all<Color>(Colors.yellow),
+                      backgroundColor: WidgetStateProperty.all<Color>(AppColors.secondary),
                       padding: WidgetStateProperty.all<EdgeInsets>(EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0)),
                       shape: WidgetStateProperty.all(RoundedRectangleBorder(borderRadius: BorderRadius.circular(4)))
                     ),
                     child: Text(
                       AppLocalizations.of(ctx)!.reservation,
-                      style: TextStyle(color: Colors.purple, fontWeight: FontWeight.bold),
+                      style: TextStyle(color: AppColors.primary, fontWeight: FontWeight.w400),
                     ),
                     onPressed: () => {
                       print('Cliquei no botão de reservar')
