@@ -8,6 +8,7 @@ import 'package:reserva_ja/screens/register_establishment_page.dart';
 import 'package:reserva_ja/screens/register_user_page.dart';
 import 'package:reserva_ja/screens/user_home_page.dart';
 import 'package:reserva_ja/screens/welcome_page.dart';
+import 'package:reserva_ja/utils/routes.dart';
 import 'firebase_options.dart';
 
 Future main() async {
@@ -33,7 +34,14 @@ class MyApp extends StatelessWidget {
       themeMode: ThemeMode.system,
       localizationsDelegates: AppLocalizations.localizationsDelegates,
       supportedLocales: AppLocalizations.supportedLocales,
-      home: RegisterEstablishmentPage(),
+      initialRoute: Routes.welcomeRoute,
+      routes: {
+        "/welcome": (context) => const WelcomePage(),
+        "/user-login": (context) => const RegisterUserPage(),
+        "/home/user": (context) => const UserHomePage(),
+        "/establishment-register": (context) => const RegisterEstablishmentPage(),
+        "/home/establishment": (context) => const EstablishmentPage(title: '', address: '', price: 0.0, sports: []),
+      },
     );
   }
 }
