@@ -23,5 +23,15 @@
   "searchByLocation": "Quadras perto de você",
   "registerAccount": "Crie sua conta",
   "joinUs": "Junte-se a nós para começar a jogar",
-  "register": "Registrar"
+  "register": "Registrar",
+  "soccer": "Futebol",
+  "tennis": "Tênis",
+  "basketball": "Basquete",
+  "volleyball": "Vôlei",
+  "badminton": "Badminton",
+  "cycling": "Ciclismo",
+  "handball": "Handebol",
+  "rugby": "Rúgbi",
+  "baseball": "Beisebol",
+  "tableTennis": "Tênis de mesa"
 }

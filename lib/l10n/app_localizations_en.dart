@@ -39,4 +39,34 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get register => 'Registrar';
+
+  @override
+  String get soccer => 'Futebol';
+
+  @override
+  String get tennis => 'Tênis';
+
+  @override
+  String get basketball => 'Basquete';
+
+  @override
+  String get volleyball => 'Vôlei';
+
+  @override
+  String get badminton => 'Badminton';
+
+  @override
+  String get cycling => 'Ciclismo';
+
+  @override
+  String get handball => 'Handebol';
+
+  @override
+  String get rugby => 'Rúgbi';
+
+  @override
+  String get baseball => 'Beisebol';
+
+  @override
+  String get tableTennis => 'Tênis de mesa';
 }

@@ -159,6 +159,66 @@ abstract class AppLocalizations {
   /// In pt, this message translates to:
   /// **'Registrar'**
   String get register;
+
+  /// No description provided for @soccer.
+  ///
+  /// In pt, this message translates to:
+  /// **'Futebol'**
+  String get soccer;
+
+  /// No description provided for @tennis.
+  ///
+  /// In pt, this message translates to:
+  /// **'Tênis'**
+  String get tennis;
+
+  /// No description provided for @basketball.
+  ///
+  /// In pt, this message translates to:
+  /// **'Basquete'**
+  String get basketball;
+
+  /// No description provided for @volleyball.
+  ///
+  /// In pt, this message translates to:
+  /// **'Vôlei'**
+  String get volleyball;
+
+  /// No description provided for @badminton.
+  ///
+  /// In pt, this message translates to:
+  /// **'Badminton'**
+  String get badminton;
+
+  /// No description provided for @cycling.
+  ///
+  /// In pt, this message translates to:
+  /// **'Ciclismo'**
+  String get cycling;
+
+  /// No description provided for @handball.
+  ///
+  /// In pt, this message translates to:
+  /// **'Handebol'**
+  String get handball;
+
+  /// No description provided for @rugby.
+  ///
+  /// In pt, this message translates to:
+  /// **'Rúgbi'**
+  String get rugby;
+
+  /// No description provided for @baseball.
+  ///
+  /// In pt, this message translates to:
+  /// **'Beisebol'**
+  String get baseball;
+
+  /// No description provided for @tableTennis.
+  ///
+  /// In pt, this message translates to:
+  /// **'Tênis de mesa'**
+  String get tableTennis;
 }
 
 class _AppLocalizationsDelegate
