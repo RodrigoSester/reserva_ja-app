@@ -10,7 +10,7 @@ class TextInput extends StatelessWidget {
   final TextStyle style;
   final InputDecoration? decoration;
   final String? Function(String? value)? validator;
-  final ValueChanged? Function(String? value)? onChanged;
+  final ValueChanged<dynamic>? Function(String? value)? onChanged;
 
   const TextInput({
     super.key,
@@ -41,8 +41,8 @@ class TextInput extends StatelessWidget {
               textDirection: TextDirection.ltr,
               validator: validator,
               onChanged: onChanged,
-            )
-          )
+            ),
+          ),
         ],
       );
     }
@@ -55,7 +55,7 @@ class TextInput extends StatelessWidget {
           style: TextTheme.of(context).labelMedium?.copyWith(
             fontSize: 14,
             fontWeight: FontWeight.w700,
-            color: AppColors.primaryText
+            color: AppColors.primaryText,
           ),
         ),
         const SizedBox(height: 4.0),
@@ -69,8 +69,8 @@ class TextInput extends StatelessWidget {
             textDirection: TextDirection.ltr,
             validator: validator,
             onChanged: onChanged,
-          )
-        )
+          ),
+        ),
       ],
     );
   }
