@@ -1,23 +1,21 @@
-import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:reserva_ja/app_theme.dart';
 import 'package:reserva_ja/l10n/app_localizations.dart';
-import 'package:reserva_ja/screens/establishment_page.dart';
-import 'package:reserva_ja/screens/register_establishment_page.dart';
-import 'package:reserva_ja/screens/register_user_page.dart';
-import 'package:reserva_ja/screens/user_home_page.dart';
-import 'package:reserva_ja/screens/welcome_page.dart';
+import 'package:reserva_ja/pages/register_establishment_page.dart';
+import 'package:reserva_ja/pages/register_user_page.dart';
+import 'package:reserva_ja/pages/user_home_page.dart';
+import 'package:reserva_ja/pages/welcome_page.dart';
 import 'package:reserva_ja/utils/routes.dart';
+
 import 'firebase_options.dart';
 
-Future main() async {
+Future<dynamic> main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
-  await dotenv.load(fileName: ".env");
-  await Firebase.initializeApp(
-    options: DefaultFirebaseOptions.currentPlatform,
-  );
+  await dotenv.load(fileName: '.env');
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
 
   runApp(const MyApp());
 }
@@ -36,11 +34,11 @@ class MyApp extends StatelessWidget {
       supportedLocales: AppLocalizations.supportedLocales,
       initialRoute: Routes.welcomeRoute,
       routes: {
-        "/welcome": (context) => const WelcomePage(),
-        "/user-login": (context) => const RegisterUserPage(),
-        "/home/user": (context) => const UserHomePage(),
-        "/establishment-register": (context) => const RegisterEstablishmentPage(),
-        "/home/establishment": (context) => const EstablishmentPage(title: '', address: '', price: 0.0, sports: []),
+        '/welcome': (context) => const WelcomePage(),
+        '/user-login': (context) => const RegisterUserPage(),
+        '/home/user': (context) => const UserHomePage(),
+        '/establishment-register': (context) =>
+            const RegisterEstablishmentPage(),
       },
     );
   }
